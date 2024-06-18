@@ -1,19 +1,19 @@
 import React from 'react';
 import './App.css';
-import { Header } from './components/Header';
-import Features from './components/Features';
-import Testimonials from './components/Testimonials';
-import Contacts from './components/Contacts';
-import Footer from './components/Footer';
+import { Routes, Route, } from 'react-router-dom';
+import Second from './components/Second';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 
 function App() {
   return (
-    <div className=" bg-blue-950 text-center text-slate-300">
-      <Header />
-      <Features />
-      <Testimonials />
-      <Contacts />
-      <Footer/>
+    <div className=" bg-blue-950 text-center w-screen min-h-screen text-slate-300">
+      <Navbar/>
+
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/second' element={<Second/>}/>
+      </Routes>
     </div>
   );
 }
